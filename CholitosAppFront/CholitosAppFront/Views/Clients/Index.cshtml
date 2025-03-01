@@ -7,7 +7,7 @@
 @section Styles{
 
     <!-- JQuery DataTable Css -->
-    <link href="~/template/jquery-datatable/css/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="~/template/css/datatables.bootstrap.css" rel="stylesheet" />
 
 };
 
@@ -24,12 +24,8 @@
                     <div class="header">
                             <button type="button" class="btn btn-primary waves-effect">
                             <i class="material-icons">library_add</i>
-                                <span>Agregar mensualidad</span>
+                                <span>Agregar cliente</span>
                             </button>
-                        <button type="button" class="btn btn-danger waves-effect">
-                            <i class="material-icons">note_add</i>
-                            <span>Agregar Quincena</span>
-                        </button>
                         <ul class="header-dropdown m-r--5">
                             <li class="dropdown">
                                 <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -48,62 +44,28 @@
                             <table class="table table-bordered table-striped table-hover dataTable js-exportable">
                                 <thead>
                                     <tr>
-                                        @* <th>Cliente</th> *@
-                                        <th>Codigo_gimnasio</th>
+                                        <th>Cliente</th>
+                                        <th>Codigo gimnasio</th>
                                         <th>Nombre</th>
-                                        @* <th>Primer_nombre</th>
-                                        <th>Segundo_nombre</th>
-                                        <th>Primer_apellido</th>
-                                        <th>Segundo_apellido</th>
-                                        <th>Apellido_casada</th> *@
-                                        <th>Fecha_pago</th>
-                                        <th>Fecha_inicio</th>
-                                        <th>Fecha_fin</th>
-                                        <th>Firma</th>
-                                        <th>Modalidad</th>
                                     </tr>
                                 </thead>
                                 @* <tfoot>
                                     <tr>
-                                         <th>Cliente</th> 
-                                        <th>Codigo_gimnasio</th>
-                                        <th>Nombre</th>
-                                         <th>Primer_nombre</th>
-                                        <th>Segundo_nombre</th>
-                                        <th>Primer_apellido</th>
-                                        <th>Segundo_apellido</th>
-                                        <th>Apellido_casada</th> 
-                                        <th>Fecha_pago</th>
-                                        <th>Fecha_inicio</th>
-                                        <th>Fecha_fin</th>
-                                        <th>Firma</th>
-                                        <th>Modalidad</th>
+                                        <th>Cliente</th>
+                                        <th>Codigo gimnasio</th>
+                                        <th>Nombres</th>
+                                        <th>Apellidos</th>
                                     </tr>
                                 </tfoot> *@
                                 <tbody>
                                     @foreach (var cliente in Model)
-                                    {
-                                        string modalidad = cliente.TipoModalidadGym.Equals("M") ? "Mensualidad" : "Quincena";
-                                        string firma = cliente.FirmaCliente.Equals("S") ? "Si" : "No";
-                                            
+                                    {                                            
                                         <tr>
-                                            @* <td>@cliente.CodigoCliente</td> *@
+                                            <td>@cliente.CodigoCliente</td>
                                             <td>@cliente.CodigoGimnasio</td>
                                             <td>@cliente.PrimerNombre @cliente.SegundoNombre @cliente.PrimerApellido @cliente.SegundoApellido @cliente.ApellidoCasada</td>
-                                            @* <td>@cliente.PrimerNombre</td>
-                                            <td>@cliente.SegundoNombre</td>
-                                            <td>@cliente.PrimerApellido</td>
-                                            <td>@cliente.SegundoApellido</td>
-                                            <td>@cliente.ApellidoCasada</td> *@
-                                            <td>@cliente.FechaPagoModalidad.Substring(3,2)-@cliente.FechaPagoModalidad.Substring(0,2)-@cliente.FechaPagoModalidad.Substring(6,4)</td>
-                                            <td>@cliente.FechaInicioModalidad.Substring(3, 2)-@cliente.FechaInicioModalidad.Substring(0, 2)-@cliente.FechaInicioModalidad.Substring(6, 4)</td>
-                                            <td>@cliente.FechaFinModalidad.Substring(3, 2)-@cliente.FechaFinModalidad.Substring(0, 2)-@cliente.FechaFinModalidad.Substring(6, 4)</td>
-                                            <td>@firma</td>
-                                            <td>@modalidad</td>
                                         </tr>
-                                    }
-
-                                                                      
+                                    }                                                                      
                                 </tbody>
                             </table>
                         </div>
@@ -118,15 +80,16 @@
 @section Scripts{
 
     <!-- Jquery DataTable Plugin Js -->
-    <script src="/template/jquery-datatable/js/jquery.dataTables.js"></script>
-    <script src="/template/jquery-datatable/js/dataTables.bootstrap.js"></script>
-    <script src="/template/jquery-datatable/js/dataTables.buttons.min.js"></script>
-    <script src="/template/jquery-datatable/js/buttons.flash.min.js"></script>
-    <script src="/template/jquery-datatable/js/jszip.min.js"></script>
-    <script src="/template/jquery-datatable/js/pdfmake.min.js"></script>
-    <script src="/template/jquery-datatable/js/vfs_fonts.js"></script>
-    <script src="/template/jquery-datatable/js/buttons.html5.min.js"></script>
-    <script src="/template/jquery-datatable/js/buttons.print.min.js"></script>
 
-    <script src="/template/custom/js/jquery-datatable.js"></script>
+    <script src="~/template/js/jquery.datatables.js"></script>
+    <script src="~/template/js/datatables.bootstrap.js"></script>
+    <script src="~/template/js/datatables.buttons.min.js"></script>
+    <script src="~/template/js/buttons.flash.min.js"></script>
+    <script src="~/template/js/jszip.min.js"></script>
+    <script src="~/template/js/pdfmake.min.js"></script>
+    <script src="~/template/js/vfs_fonts.js"></script>
+    <script src="~/template/js/buttons.html5.min.js"></script>
+    <script src="~/template/js/buttons.print.min.js"></script>
+
+    <script src="~/template/js/custom/datatable-config.js"></script>
 };

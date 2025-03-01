@@ -1,11 +1,15 @@
 
--- DATA PARA CLIENTES
+-- Insert de data para clientes.
 
-INSERT INTO CHOLITOS_GYM_CLIENTE(CODIGO_GENERACION, PRIMER_NOMBRE, SEGUNDO_NOMBRE, PRIMER_APELLIDO, SEGUNDO_APELLIDO, APELLIDO_CASADA, FECHA_PAGO, FECHA_INICIO, FECHA_FIN, FIRMA, TIPO_MODALIDAD) VALUES('SPK5C', 'Damaris', '', 'Silva', '', '', '2024-12-02', '2024-12-02', '2024-12-31', 'S', 'M');
-INSERT INTO CHOLITOS_GYM_CLIENTE(CODIGO_GENERACION, PRIMER_NOMBRE, SEGUNDO_NOMBRE, PRIMER_APELLIDO, SEGUNDO_APELLIDO, APELLIDO_CASADA, FECHA_PAGO, FECHA_INICIO, FECHA_FIN, FIRMA, TIPO_MODALIDAD) VALUES('L1CWT', 'Alexis', '', 'Castaneda', '', '', '2024-12-03', '2024-12-03', '2024-12-31', 'S', 'M');
-INSERT INTO CHOLITOS_GYM_CLIENTE(CODIGO_GENERACION, PRIMER_NOMBRE, SEGUNDO_NOMBRE, PRIMER_APELLIDO, SEGUNDO_APELLIDO, APELLIDO_CASADA, FECHA_PAGO, FECHA_INICIO, FECHA_FIN, FIRMA, TIPO_MODALIDAD) VALUES('KEAPS', 'Sara', '', '', '', 'de Clemente', '2024-12-04', '2024-12-04', '2024-12-31', 'S', 'M');
-INSERT INTO CHOLITOS_GYM_CLIENTE(CODIGO_GENERACION, PRIMER_NOMBRE, SEGUNDO_NOMBRE, PRIMER_APELLIDO, SEGUNDO_APELLIDO, APELLIDO_CASADA, FECHA_PAGO, FECHA_INICIO, FECHA_FIN, FIRMA, TIPO_MODALIDAD) VALUES('KTGQ9', 'Stanley', '', 'Idalgo', '', '', '2024-12-05', '', '', 'S', 'M');
-INSERT INTO CHOLITOS_GYM_CLIENTE(CODIGO_GENERACION, PRIMER_NOMBRE, SEGUNDO_NOMBRE, PRIMER_APELLIDO, SEGUNDO_APELLIDO, APELLIDO_CASADA, FECHA_PAGO, FECHA_INICIO, FECHA_FIN, FIRMA, TIPO_MODALIDAD) VALUES('RHD1E', 'Israel ', '', 'Cabrera', 'Rodriguez', '', '2024-12-06', '2024-12-09', '2025-01-07', 'S', 'M');
-INSERT INTO CHOLITOS_GYM_CLIENTE(CODIGO_GENERACION, PRIMER_NOMBRE, SEGUNDO_NOMBRE, PRIMER_APELLIDO, SEGUNDO_APELLIDO, APELLIDO_CASADA, FECHA_PAGO, FECHA_INICIO, FECHA_FIN, FIRMA, TIPO_MODALIDAD) VALUES('RXZ1E', 'Nestor', '', 'Genovez', '', '', '2024-12-07', '2024-12-10', '2025-01-08', 'N', 'M');
-INSERT INTO CHOLITOS_GYM_CLIENTE(CODIGO_GENERACION, PRIMER_NOMBRE, SEGUNDO_NOMBRE, PRIMER_APELLIDO, SEGUNDO_APELLIDO, APELLIDO_CASADA, FECHA_PAGO, FECHA_INICIO, FECHA_FIN, FIRMA, TIPO_MODALIDAD) VALUES('R2L1E', 'Mabel', '', 'Sambrano', '', '', '2024-12-08', '2024-12-11', '2025-01-09', 'N', 'M');
+INSERT INTO Cliente(CodigoGimnasio, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, ApellidoCasada) VALUES('SPK5C', 'Damaris', '', 'Silva', '', '');					
+INSERT INTO Cliente(CodigoGimnasio, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, ApellidoCasada) VALUES('L1CWT', 'Alexis', '', 'Castaneda', '', '');					
+INSERT INTO Cliente(CodigoGimnasio, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, ApellidoCasada) VALUES('KEAPS', 'Sara', '', '', '', 'de Clemente');					
+INSERT INTO Cliente(CodigoGimnasio, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, ApellidoCasada) VALUES('KTGQ9', 'Stanley', '', 'Idalgo', '', '');					
+INSERT INTO Cliente(CodigoGimnasio, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, ApellidoCasada) VALUES('RHD1E', 'Israel ', '', 'Cabrera', 'Rodriguez', '');					
+INSERT INTO Cliente(CodigoGimnasio, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, ApellidoCasada) VALUES('RXZ1E', 'Nestor', '', 'Genovez', '', '');					
+INSERT INTO Cliente(CodigoGimnasio, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, ApellidoCasada) VALUES('R2L1E', 'Mabel', '', 'Sambrano', '', '');					
+
+
+
+
 

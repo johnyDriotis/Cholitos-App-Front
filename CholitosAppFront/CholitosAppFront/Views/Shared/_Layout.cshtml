@@ -14,19 +14,20 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap Core Css -->
-    <link href="/template/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="~/template/css/bootstrap.css" rel="stylesheet" />
 
     <!-- Waves Effect Css -->
-    <link href="/template/node-waves/css/waves.css" rel="stylesheet" />
+    <link href="~/template/css/waves.css" rel="stylesheet" />
 
     <!-- Animation Css -->
-    <link href="/template/animate/css/animate.css" rel="stylesheet" />
+    <link href="~/template/css/animate.css" rel="stylesheet" />
 
     <!-- Custom Css -->
-    <link href="/template/custom/css/style.css" rel="stylesheet">
+    <link href="~/template/css/style.css" rel="stylesheet" />
+
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
-    <link href="/template/all-themes/css/all-themes.css" rel="stylesheet" />
+    <link href="~/template/css/all-themes.css" rel="stylesheet" />
 
     @RenderSection("Styles", required: false);
 </head>
@@ -303,6 +304,12 @@
                         <a href="/Home/Index">
                             <i class="material-icons">home</i>
                             <span>Pagina principal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Client/Index">
+                            <i class="material-icons">library_books</i>
+                            <span>Clientes</span>
                         </a>
                     </li>
                     <li>
@@ -797,28 +804,28 @@
     @RenderBody()
 
     <!-- Jquery Core Js -->
-    <script src="/template/jquery/js/jquery.min.js"></script>
+    <script src="~/template/js/jquery.min.js"></script>
 
     <!-- Bootstrap Core Js -->
-    <script src="/template/bootstrap/js/bootstrap.js"></script>
+    <script src="~/template/js/bootstrap.js"></script>
 
     <!-- Select Plugin Js -->
-    <script src="/template/bootstrap-select/js/bootstrap-select.js"></script>
+    <script src="~/template/js/bootstrap-select.js"></script>
 
     <!-- Slimscroll Plugin Js -->
-    <script src="/template/jquery-slimscroll/js/jquery.slimscroll.js"></script>
+    <script src="~/template/js/jquery.slimscroll.js"></script>
 
     <!-- Waves Effect Plugin Js -->
-    <script src="/template/node-waves/js/waves.js"></script>
+    <script src="~/template/js/waves.js"></script>
 
     <!-- ChartJs -->
-    <script src="/template/chartjs/js/Chart.bundle.js"></script>
+    <script src="~/template/js/chart.bundle.js"></script>
 
     <!-- Custom Js -->
-    <script src="/template/custom/js/admin.js"></script>
+    <script src="~/template/js/admin.js"></script>
 
     <!-- Demo Js -->
-    <script src="/template/custom/js/demo.js"></script>
+    <script src="~/template/js/demo.js"></script>
 
     @RenderSection("Scripts", required: false);
 </body>

@@ -30,7 +30,7 @@ namespace CholitosAppFront.Infrastructure.Repository
             try
             {
                 _dbConnection.Open();
-                estadoConexion = _dbConnection != null || _dbConnection.State == System.Data.ConnectionState.Open ? "Exito: Conectado a base de datos CHOLITOS_GYM" :
+                estadoConexion = _dbConnection != null || _dbConnection.State == System.Data.ConnectionState.Open ? "Exito: Conectado a base de datos " + _properties.Database :
                     "Error: No se pudo conectar a la base de datos solicitada";
             }
             catch (Exception ex)

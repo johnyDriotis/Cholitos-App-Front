@@ -1,38 +1,21 @@
 
+USE Gimnasio;
+
 -- ********** CONSULTAS REFERENTES A CLIENTES
 
-SELECT * FROM CHOLITOS_GYM_CLIENTE;
+SELECT * FROM Cliente;
 
 SELECT 
-	CLIENTE				[Codigo_Cliente],
-	CODIGO_GENERACION	[Codigo_Gimnasio],
-	PRIMER_NOMBRE		[Primer_Nombre],
-	SEGUNDO_NOMBRE		[Segundo_Nombre],
-	PRIMER_APELLIDO		[Primer_Apellido],
-	SEGUNDO_APELLIDO	[Segundo_Apellido],
-	APELLIDO_CASADA		[Apellido_Casada],
-	FECHA_PAGO			[Fecha_Pago_Modalidad],
-	FECHA_INICIO		[Fecha_Inicio_Modalidad],
-
-	FECHA_FIN			[Fecha_Fin_Modalidad],
-	FIRMA				[Firma_Cliente],
-	TIPO_MODALIDAD		[Tipo_Modalidad_Gym]
+	CodigoCliente	[Codigo_Cliente],
+	CodigoGimnasio	[Codigo_Gimnasio],
+	PrimerNombre	[Primer_Nombre],
+	SegundoNombre	[Segundo_Nombre],
+	PrimerApellido	[Primer_Apellido],
+	SegundoApellido	[Segundo_Apellido],
+	ApellidoCasada	[Apellido_Casada]
 FROM 
-	CHOLITOS_GYM_CLIENTE;
+	Cliente;
 --WHERE 
---	CODIGO_GENERACION LIKE '%%'
+--	CodigoGimnasio LIKE '%%'
 --	OR PRIMER_NOMBRE LIKE '%%'
---	OR SEGUNDO_NOMBRE LIKE '%%'
---	or PRIMER_APELLIDO LIKE '%%'
---	OR SEGUNDO_APELLIDO LIKE '%%'
---	OR APELLIDO_CASADA LIKE '%%'
---	OR FIRMA LIKE '%%'
---	OR TIPO_MODALIDAD LIKE '%%';
-
-UPDATE 
-	CHOLITOS_GYM_CLIENTE
-SET
-	TIPO_MODALIDAD = 'Q'
-WHERE
-	CLIENTE IN ('3', '7', '10', '11');
 	

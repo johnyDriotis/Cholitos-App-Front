@@ -14,13 +14,13 @@ namespace CholitosAppFront.Controllers
             _clientUseCase = clientUeCase ?? throw new ArgumentNullException(nameof(clientUeCase));
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             List<ClientDto> clients = new List<ClientDto>();
 
             try
             {
-                clients = _clientUseCase.GetAllClients().Result.ToList();
+                clients = await _clientUseCase.GetAllClients();
             }
             catch (Exception ex)
             {
