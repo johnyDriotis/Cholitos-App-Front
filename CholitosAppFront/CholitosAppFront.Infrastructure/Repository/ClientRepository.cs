@@ -1,13 +1,10 @@
 ﻿using AutoMapper;
-using CholitosAppFront.Configuration;
 using CholitosAppFront.Core.Domain;
 using CholitosAppFront.Core.DTOs;
 using CholitosAppFront.Core.Interfaces;
 using CholitosAppFront.Infrastructure.Queries;
 using Dapper;
 using System.Data;
-using System.Data.Common;
-using System.Data.SqlClient;
 
 namespace CholitosAppFront.Infrastructure.Repository
 {

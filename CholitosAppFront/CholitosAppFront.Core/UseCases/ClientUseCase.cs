@@ -1,7 +1,6 @@
 ﻿using CholitosAppFront.Core.DTOs;
 using CholitosAppFront.Core.Interfaces;
 using CholitosAppFront.Core.UseCases.Interfaces;
-using CholitosAppFront.Infrastructure.Repository;
 
 namespace CholitosAppFront.Core.UseCases
 {

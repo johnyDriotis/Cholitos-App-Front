@@ -1,6 +1,5 @@
 using CholitosAppFront.Core.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 
 namespace CholitosAppFront.Controllers
 {

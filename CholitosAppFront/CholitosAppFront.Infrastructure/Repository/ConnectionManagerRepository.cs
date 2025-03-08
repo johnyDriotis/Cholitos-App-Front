@@ -1,9 +1,5 @@
-﻿using CholitosAppFront.Core.Domain;
-using CholitosAppFront.Core.DTOs;
-using CholitosAppFront.Core.Interfaces;
-using Dapper;
+﻿using CholitosAppFront.Core.Interfaces;
 using System.Data;
-using System.Data.Common;
 using System.Data.SqlClient;
 using System.Diagnostics;
 

@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CholitosAppFront", "CholitosAppFront\CholitosAppFront.csproj", "{06C9C6AD-67EC-4732-8339-BD4AA9DD2A0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CholitosAppFront", "CholitosAppFront\CholitosAppFront.csproj", "{06C9C6AD-67EC-4732-8339-BD4AA9DD2A0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CholitosAppFront.Core", "CholitosAppFront.Core\CholitosAppFront.Core.csproj", "{63289B80-765A-4EFA-A90F-466BC34F1CF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CholitosAppFront.Infrastructure", "CholitosAppFront.Infrastructure\CholitosAppFront.Infrastructure.csproj", "{5BAF75F6-F893-4658-AF75-9B927C0ABD7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{06C9C6AD-67EC-4732-8339-BD4AA9DD2A0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06C9C6AD-67EC-4732-8339-BD4AA9DD2A0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06C9C6AD-67EC-4732-8339-BD4AA9DD2A0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63289B80-765A-4EFA-A90F-466BC34F1CF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63289B80-765A-4EFA-A90F-466BC34F1CF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63289B80-765A-4EFA-A90F-466BC34F1CF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63289B80-765A-4EFA-A90F-466BC34F1CF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BAF75F6-F893-4658-AF75-9B927C0ABD7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BAF75F6-F893-4658-AF75-9B927C0ABD7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BAF75F6-F893-4658-AF75-9B927C0ABD7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BAF75F6-F893-4658-AF75-9B927C0ABD7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

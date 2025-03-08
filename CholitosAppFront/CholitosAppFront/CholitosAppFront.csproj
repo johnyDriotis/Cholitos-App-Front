@@ -14,9 +14,11 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.12" />
-    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
-    <PackageReference Include="AutoMapper" Version="13.0.1" />
-    <PackageReference Include="Dapper" Version="2.1.35" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CholitosAppFront.Core\CholitosAppFront.Core.csproj" />
+    <ProjectReference Include="..\CholitosAppFront.Infrastructure\CholitosAppFront.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
