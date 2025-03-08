@@ -32,5 +32,9 @@ namespace CholitosAppFront.Controllers
                 model: clients
             );
         }
+
+        public async Task<IActionResult> NuevoCliente() {
+            return View(viewName: "~/Views/Clients/NuevoCliente.cshtml");
+        }
     }
 }

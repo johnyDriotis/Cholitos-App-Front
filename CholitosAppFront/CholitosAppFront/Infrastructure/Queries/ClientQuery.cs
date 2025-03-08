@@ -14,5 +14,38 @@
 					FROM 
 						Cliente";
         }
+
+		public static string AgregarCliente() {
+			return @"INSERT INTO Cliente(
+						CodigoGimnasio, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, 
+						ApellidoCasada)
+					VALUES(
+						@CodigoGimnasio, @PrimerNombre, @SegundoNombre, @PrimerApellido, @SegundoApellido,
+						@ApellidoCasada
+					))";
+		}
+
+        public static string ModificarCliente()
+        {
+			return @"UPDATE 
+						Cliente
+					SET
+						CodigoGimnasio = @CodigoGimnasio,
+						PrimerNombre = @PrimerNombre,
+						SegundoNombre = @SegundoNombre,
+						PrimerApellido = @PrimerApellido,
+						SegundoApellido = @SegundoApellido,
+						ApellidoCasada = @ApellidoCasada
+					WHERE
+						CodigoCliente = @CodigoCliente";
+        }
+
+        public static string EliminarCliente()
+        {
+            return @"DELETE FROM 
+						Cliente 
+					WHERE 
+						CodigoCliente = @CodigoCliente";
+        }
     }
 }

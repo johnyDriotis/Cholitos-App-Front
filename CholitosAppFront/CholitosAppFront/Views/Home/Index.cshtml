@@ -1,14 +1,9 @@
 ﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "Home Page";
+
     string msjConexion = ViewData["MsjConexion"].ToString() ?? "";
 }
-
-@section Styles{
-
-    <!-- Morris Chart Css -->
-    <link href="~/template/css/morris.css" rel="stylesheet" />
-
-};
 
 @{
     if (!msjConexion.Contains("Error"))
@@ -336,27 +331,16 @@
     }
 }
 
-@section Scripts{
-
-    <!-- Jquery CountTo Plugin Js -->
-    <script src="~/template/js/jquery.countto.js"></script>
-
-    <!-- Morris Plugin Js -->
-    <script src="~/template/js/raphael.min.js"></script>
-    <script src="~/template/js/morris.js"></script>
+@section JqueryFlot {
 
     <!-- Flot Charts Plugin Js -->
-    <script src="~/template/js/jquery.flot.js"></script>
-    <script src="~/template/js/jquery.flot.resize.js"></script>
-    <script src="~/template/js/jquery.flot.pie.js"></script>
-    <script src="~/template/js/jquery.flot.categories.js"></script>
-    <script src="~/template/js/jquery.flot.time.js"></script>
-    
+    <script src="~/template/plugins/flot-charts/jquery.flot.js"></script>
+    <script src="~/template/plugins/flot-charts/jquery.flot.resize.js"></script>
+    <script src="~/template/plugins/flot-charts/jquery.flot.pie.js"></script>
+    <script src="~/template/plugins/flot-charts/jquery.flot.categories.js"></script>
+    <script src="~/template/plugins/flot-charts/jquery.flot.time.js"></script>
 
-    <!-- Sparkline Chart Plugin Js -->
-    <script src="~/template/js/jquery.sparkline.js"></script>
-
-    <!-- Custom Js -->
+    <!-- Inicializacion de plot, graficos -->
     <script src="~/template/js/index.js"></script>
 
 }

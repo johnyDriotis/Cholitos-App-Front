@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>Welcome To | Bootstrap Based Admin Template - Material Design</title>
+
     <!-- Favicon-->
     <link rel="icon" href="/template/favicon.ico" type="image/x-icon">
 
@@ -14,20 +15,25 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap Core Css -->
-    <link href="~/template/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/template/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" />
 
     <!-- Waves Effect Css -->
-    <link href="~/template/css/waves.css" rel="stylesheet" />
+    <link href="~/template/plugins/node-waves/css/waves.css" rel="stylesheet" />
 
     <!-- Animation Css -->
-    <link href="~/template/css/animate.css" rel="stylesheet" />
+    <link href="~/template/plugins/animate-css/animate.css" rel="stylesheet" />
+
+    <!-- Morris Chart Css-->
+    <link href="~/template/plugins/morrisjs/css/morris.css" rel="stylesheet" />
 
     <!-- Custom Css -->
     <link href="~/template/css/style.css" rel="stylesheet" />
 
-
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="~/template/css/all-themes.css" rel="stylesheet" />
+
+    <!-- JQuery DataTable Css -->
+    <link href="~/template/plugins/jquery-datatable/skin/bootstrap/css/datatables.bootstrap.css" rel="stylesheet" />
 
     @RenderSection("Styles", required: false);
 </head>
@@ -306,18 +312,18 @@
                             <span>Pagina principal</span>
                         </a>
                     </li>
-                    <li>
+                    @* <li>
                         <a href="/Client/Index">
                             <i class="material-icons">library_books</i>
                             <span>Clientes</span>
                         </a>
-                    </li>
-                    <li>
+                    </li> *@
+                    @* <li>
                         <a href="/Client/Index">
                             <i class="material-icons">library_books</i>
                             <span>Mensualidad/Quincenas.</span>
                         </a>
-                    </li>
+                    </li> *@
                     @* <li>
                         <a href="pages/helper-classes.html">
                             <i class="material-icons">layers</i>
@@ -448,32 +454,20 @@
                             </li>
                         </ul>
                     </li> *@
-                    @* <li>
+                    <li>
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">assignment</i>
-                            <span>Forms</span>
+                            <span>Clientes</span>
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="pages/forms/basic-form-elements.html">Basic Form Elements</a>
+                                <a href="/Client/Index">Listado de clientes</a>
                             </li>
                             <li>
-                                <a href="pages/forms/advanced-form-elements.html">Advanced Form Elements</a>
-                            </li>
-                            <li>
-                                <a href="pages/forms/form-examples.html">Form Examples</a>
-                            </li>
-                            <li>
-                                <a href="pages/forms/form-validation.html">Form Validation</a>
-                            </li>
-                            <li>
-                                <a href="pages/forms/form-wizard.html">Form Wizard</a>
-                            </li>
-                            <li>
-                                <a href="pages/forms/editors.html">Editors</a>
+                                <a href="Client/NuevoCliente">Nuevo Cliente</a>
                             </li>
                         </ul>
-                    </li> *@
+                    </li>
                     @* <li>
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">view_list</i>
@@ -804,25 +798,56 @@
     @RenderBody()
 
     <!-- Jquery Core Js -->
-    <script src="~/template/js/jquery.min.js"></script>
+    <script src="~/template/plugins/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core Js -->
-    <script src="~/template/js/bootstrap.js"></script>
+    <script src="~/template/plugins/bootstrap/js/bootstrap.js"></script>
 
     <!-- Select Plugin Js -->
-    <script src="~/template/js/bootstrap-select.js"></script>
+    <script src="~/template/plugins/bootstrap-select/js/bootstrap-select.js"></script>
 
     <!-- Slimscroll Plugin Js -->
-    <script src="~/template/js/jquery.slimscroll.js"></script>
+    <script src="~/template/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
 
     <!-- Waves Effect Plugin Js -->
-    <script src="~/template/js/waves.js"></script>
+    <script src="~/template/plugins/node-waves/js/waves.js"></script>
+
+    <!-- Jquery CountTo Plugin Js -->
+    <script src="~/template/plugins/jquery-countto/jquery.countto.js"></script>
+
+    <!-- Morris Plugin Js -->
+    <script src="~/template/plugins/raphael/raphael.min.js"></script>
+    <script src="~/template/plugins/morrisjs/js/morris.js"></script>
 
     <!-- ChartJs -->
-    <script src="~/template/js/chart.bundle.js"></script>
+    <script src="~/template/plugins/chartjs/chart.bundle.js"></script>
 
+    <!-- Renderizar librerias de jquery flot donde se necesite -->
+    @RenderSection("JqueryFlot", required: false);
+
+    <!-- Sparkline Chart Plugin Js -->
+    <script src="~/template/plugins/jquery-sparkline/jquery.sparkline.js"></script>
+
+    <!-- Jquery DataTable Plugin Js -->
+    <script src="~/template/plugins/jquery-datatable/jquery.datatables.js"></script>
+    <script src="~/template/plugins/jquery-datatable/skin/bootstrap/js/datatables.bootstrap.js"></script>
+    <script src="~/template/plugins/jquery-datatable/extensions/export/datatables.buttons.min.js"></script>
+    <script src="~/template/plugins/jquery-datatable/extensions/export/buttons.flash.min.js"></script>
+    <script src="~/template/plugins/jquery-datatable/extensions/export/jszip.min.js"></script>
+    <script src="~/template/plugins/jquery-datatable/extensions/export/pdfmake.min.js"></script>
+    <script src="~/template/plugins/jquery-datatable/extensions/export/vfs_fonts.js"></script>
+    <script src="~/template/plugins/jquery-datatable/extensions/export/buttons.html5.min.js"></script>
+    <script src="~/template/plugins/jquery-datatable/extensions/export/buttons.print.min.js"></script>
+
+    <!-- Configuracion de datatable personalizado al idioma espanol -->
+    <script src="~/template/js/custom/datatable-config.js"></script>
+
+    <!-- Jquery Validation Plugin Css -->
+    <script src="~/template/plugins/jquery-validation/jquery.validate.js"></script>
+    
     <!-- Custom Js -->
     <script src="~/template/js/admin.js"></script>
+    <script src="~/template/js/custom/form-validation.js"></script>
 
     <!-- Demo Js -->
     <script src="~/template/js/demo.js"></script>

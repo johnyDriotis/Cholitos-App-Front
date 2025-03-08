@@ -1,15 +1,9 @@
 ﻿@model List<ClientDto>
 
 @{
-    ViewData["Title"] = "Pagina de clientes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Listado de clientes";
 }
-
-@section Styles{
-
-    <!-- JQuery DataTable Css -->
-    <link href="~/template/css/datatables.bootstrap.css" rel="stylesheet" />
-
-};
 
 <section class="content">
     <div class="container-fluid">
@@ -76,20 +70,3 @@
         <!-- #END# Exportable Table -->
     </div>
 </section>
-
-@section Scripts{
-
-    <!-- Jquery DataTable Plugin Js -->
-
-    <script src="~/template/js/jquery.datatables.js"></script>
-    <script src="~/template/js/datatables.bootstrap.js"></script>
-    <script src="~/template/js/datatables.buttons.min.js"></script>
-    <script src="~/template/js/buttons.flash.min.js"></script>
-    <script src="~/template/js/jszip.min.js"></script>
-    <script src="~/template/js/pdfmake.min.js"></script>
-    <script src="~/template/js/vfs_fonts.js"></script>
-    <script src="~/template/js/buttons.html5.min.js"></script>
-    <script src="~/template/js/buttons.print.min.js"></script>
-
-    <script src="~/template/js/custom/datatable-config.js"></script>
-};

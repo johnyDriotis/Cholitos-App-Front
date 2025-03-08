@@ -1,0 +1,76 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Nuevo cliente";
+}
+
+<section class="content">
+    <div class="container-fluid">
+        <!-- Basic Validation -->
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <div class="header">
+                        <h2>Formulario de clientes</h2>
+                    </div>
+                    <div class="body">
+                        <form id="form_validation" method="POST" novalidate="novalidate">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" id="txtPrimerNombre" name="txtPrimerNombre" required="" aria-required="true" maxlength="30">
+                                            <label class="form-label">Primer nombre</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" id="txtSegundoNombre" name="txtSegundoNombre">
+                                            <label class="form-label">Segundo nombre</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" id="txtPrimerApellido" name="txtPrimerApellido" required="" aria-required="true" maxlength="30">
+                                            <label class="form-label">Primer apellido</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" id="txtSegundoApellido" name="txtSegundoApellido">
+                                            <label class="form-label">Segundo apellido</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" id="txtApellidoCasada" name="txtApellidoCasada">
+                                            <label class="form-label">Apellido casada</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                </div>
+                            </div>
+                            <button class="btn btn-primary waves-effect" type="submit">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- #END# Basic Validation -->
+
+    </div>
+</section>
