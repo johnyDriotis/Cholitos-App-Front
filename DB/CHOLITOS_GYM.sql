@@ -1,9 +1,7 @@
 
--- Crear base de datos.
-CREATE DATABASE GIMNASIO;
 
--- Poner en uso la base de datos.
-USE GIMNASIO;
+
+
 
 /*
 	-- Crear login para usuario de base de datos.
@@ -11,6 +9,8 @@ USE GIMNASIO;
 	-- Asignar login a usuario.
 	CREATE USER CHOLGYM FOR LOGIN CHOLGYM;
 */
+
+
 
 -- Tabla de membresias.
 CREATE TABLE MEMBRESIA(

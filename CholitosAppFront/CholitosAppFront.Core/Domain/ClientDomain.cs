@@ -10,5 +10,6 @@ namespace CholitosAppFront.Core.Domain
        public string Primer_Apellido { get; set; }
        public string Segundo_Apellido { get; set; }
        public string Apellido_Casada { get; set; }
+       public string Estado { get; set; }
     }
 }

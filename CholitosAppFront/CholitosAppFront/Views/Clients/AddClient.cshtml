@@ -10,15 +10,17 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="header">
-                        <h2>Formulario de clientes</h2>
+                        <h2>Formulario para agregar clientes</h2>
                     </div>
                     <div class="body">
-                        <form id="form_validation" method="POST" novalidate="novalidate">
+                        <form id="frmAgregarCliente" method="POST" novalidate="novalidate">
+
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group form-float">
                                         <div class="form-line">
-                                            <input type="text" class="form-control" id="txtPrimerNombre" name="txtPrimerNombre" required="" aria-required="true" maxlength="30">
+                                            <input type="text" class="form-control" id="txtPrimerNombre" name="txtPrimerNombre"
+                                                   required="" aria-required="true" maxlength="30">
                                             <label class="form-label">Primer nombre</label>
                                         </div>
                                     </div>
@@ -32,12 +34,13 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group form-float">
                                         <div class="form-line">
-                                            <input type="text" class="form-control" id="txtPrimerApellido" name="txtPrimerApellido" required="" aria-required="true" maxlength="30">
+                                            <input type="text" class="form-control" id="txtPrimerApellido" name="txtPrimerApellido" required=""
+                                                   aria-required="true" maxlength="30">
                                             <label class="form-label">Primer apellido</label>
                                         </div>
                                     </div>
@@ -62,15 +65,28 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div>
+                                            <input type="checkbox" id="chkEstado" name="chkEstado" checked>
+                                            <label for="chkEstado">Estado ... </label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
                             <button class="btn btn-primary waves-effect" type="submit">Guardar</button>
+
+
                         </form>
                     </div>
                 </div>
             </div>
         </div>
         <!-- #END# Basic Validation -->
-
     </div>
 </section>
+
+@section Scripts {
+    <!-- Archivo js para pagina de agregar cliente -->
+    <script src="~/js/clients/addclient.js"></script>
+}

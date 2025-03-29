@@ -1,9 +1,16 @@
 ﻿using CholitosAppFront.Core.DTOs;
+using CholitosAppFront.Core.Request;
+using CholitosAppFront.Core.Response;
 
 namespace CholitosAppFront.Core.UseCases.Interfaces
 {
     public interface IClientUseCase
     {
-        Task<List<ClientDto>> GetAllClients();
+        Task<GenericResponse<List<ClientDto>>> GetAllClients();
+        Task<GenericResponse<ClientDto>> AddClient(ClientRequest clientRequest);
+        Task<GenericResponse<ClientDto>> ModifyClient(ClientRequest clientRequest);
+        Task<GenericResponse<ClientDto>> DeleteClient(ClientRequest clientRequest);
+        Task<GenericResponse<ClientDto>> ChangeStateClient(ClientRequest clientRequest);
+        Task<GenericResponse<ClientDto>> GetClientById(int idCliente);
     }
 }

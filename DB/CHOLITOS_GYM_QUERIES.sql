@@ -1,12 +1,12 @@
 
-USE Gimnasio;
+GO
+	USE Gimnasio;
+GO
 
--- ********** CONSULTAS REFERENTES A CLIENTES
-
-SELECT * FROM Cliente;
+SELECT * FROM dbo.Cliente;
 
 SELECT 
-	CodigoCliente	[Codigo_Cliente],
+	IdCliente	[Codigo_Cliente],
 	CodigoGimnasio	[Codigo_Gimnasio],
 	PrimerNombre	[Primer_Nombre],
 	SegundoNombre	[Segundo_Nombre],

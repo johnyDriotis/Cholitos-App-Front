@@ -4,48 +4,76 @@
     {
         public static string GetAllClients() {
             return @"SELECT 
-						CodigoCliente	[Codigo_Cliente],
+						IdCliente	[Codigo_Cliente],
 						CodigoGimnasio	[Codigo_Gimnasio],
 						PrimerNombre	[Primer_Nombre],
 						SegundoNombre	[Segundo_Nombre],
 						PrimerApellido	[Primer_Apellido],
 						SegundoApellido	[Segundo_Apellido],
-						ApellidoCasada	[Apellido_Casada]
+						ApellidoCasada	[Apellido_Casada],
+						Estado			[Estado]
 					FROM 
 						Cliente";
         }
 
-		public static string AgregarCliente() {
+		public static string AddClient() {
 			return @"INSERT INTO Cliente(
 						CodigoGimnasio, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, 
-						ApellidoCasada)
+						ApellidoCasada, Estado)
 					VALUES(
 						@CodigoGimnasio, @PrimerNombre, @SegundoNombre, @PrimerApellido, @SegundoApellido,
-						@ApellidoCasada
-					))";
+						@ApellidoCasada, @Estado
+					)";
 		}
 
-        public static string ModificarCliente()
+        public static string ModifyClient()
         {
 			return @"UPDATE 
 						Cliente
 					SET
-						CodigoGimnasio = @CodigoGimnasio,
 						PrimerNombre = @PrimerNombre,
 						SegundoNombre = @SegundoNombre,
 						PrimerApellido = @PrimerApellido,
 						SegundoApellido = @SegundoApellido,
-						ApellidoCasada = @ApellidoCasada
+						ApellidoCasada = @ApellidoCasada,
+						Estado = @Estado
 					WHERE
-						CodigoCliente = @CodigoCliente";
+						IdCliente = @IdCliente";
         }
 
-        public static string EliminarCliente()
+        public static string DeleteClient()
         {
             return @"DELETE FROM 
 						Cliente 
 					WHERE 
-						CodigoCliente = @CodigoCliente";
+						IdCliente = @IdCliente";
+        }
+
+        public static string ChangeStateClient()
+        {
+            return @"UPDATE 
+						Cliente
+					SET
+						Estado = @Estado
+					WHERE
+						IdCliente = @IdCliente";
+        }
+
+        public static string GetClientById()
+        {
+			return @"SELECT 
+						IdCliente	[Codigo_Cliente],
+						CodigoGimnasio	[Codigo_Gimnasio],
+						PrimerNombre	[Primer_Nombre],
+						SegundoNombre	[Segundo_Nombre],
+						PrimerApellido	[Primer_Apellido],
+						SegundoApellido	[Segundo_Apellido],
+						ApellidoCasada	[Apellido_Casada],
+						Estado			[Estado]
+					FROM 
+						Cliente
+					WHERE 
+						IdCliente = @IdCliente";
         }
     }
 }

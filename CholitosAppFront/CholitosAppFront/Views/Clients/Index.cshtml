@@ -1,4 +1,4 @@
-﻿@model List<ClientDto>
+﻿@model GenericResponse<List<ClientDto>>
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -8,7 +8,6 @@
 <section class="content">
     <div class="container-fluid">
         <div class="block-header">
-            
         </div>
         <!-- #END# Basic Examples -->
         <!-- Exportable Table -->
@@ -16,22 +15,10 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="header">
-                            <button type="button" class="btn btn-primary waves-effect">
+                        <button type="button" class="btn btn-primary waves-effect" id="btnNewClient" onclick="javascriptRedirect('/Client/AddClient')">
                             <i class="material-icons">library_add</i>
-                                <span>Agregar cliente</span>
-                            </button>
-                        <ul class="header-dropdown m-r--5">
-                            <li class="dropdown">
-                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                    <i class="material-icons">more_vert</i>
-                                </a>
-                                <ul class="dropdown-menu pull-right">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else here</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                            <span>Agregar cliente</span>
+                        </button>
                     </div>
                     <div class="body">
                         <div class="table-responsive">
@@ -41,25 +28,43 @@
                                         <th>Cliente</th>
                                         <th>Codigo gimnasio</th>
                                         <th>Nombre</th>
+                                        <th>Operaciones</th>
                                     </tr>
                                 </thead>
-                                @* <tfoot>
-                                    <tr>
-                                        <th>Cliente</th>
-                                        <th>Codigo gimnasio</th>
-                                        <th>Nombres</th>
-                                        <th>Apellidos</th>
-                                    </tr>
-                                </tfoot> *@
                                 <tbody>
-                                    @foreach (var cliente in Model)
-                                    {                                            
+                                    @foreach (var cliente in Model.Item)
+                                    {
+                                        string btnClassEstado = cliente.Estado.Equals("A") ? "btn-success" : "btn-danger";
+
                                         <tr>
                                             <td>@cliente.CodigoCliente</td>
                                             <td>@cliente.CodigoGimnasio</td>
                                             <td>@cliente.PrimerNombre @cliente.SegundoNombre @cliente.PrimerApellido @cliente.SegundoApellido @cliente.ApellidoCasada</td>
+                                            <td>
+                                                <a type="button" class="btn btn-primary waves-effect" asp-controller="Client" asp-action="ModifyClient"
+                                                   asp-route-idCliente="@cliente.CodigoCliente">Modificar</a>
+
+                                                <button type="button" class="btn btn-danger waves-effect eliminar-cliente"
+                                                        data-idCliente="@cliente.CodigoCliente"
+                                                        data-nombreCompleto="@cliente.PrimerNombre @cliente.PrimerApellido">
+                                                    Eliminar
+                                                </button>
+
+                                                <button type="button" class="btn @btnClassEstado waves-effect cambiar-estado"
+                                                        data-idCliente="@cliente.CodigoCliente"
+                                                        data-nombreCompleto="@cliente.PrimerNombre @cliente.PrimerApellido"
+                                                        data-estado="@cliente.Estado">
+                                                    Cambiar estado
+                                                </button>
+                                                <a type="button" class="btn btn-info waves-effect"
+                                                        asp-controller="Client" asp-action="ClientDetails"
+                                                        asp-route-idCliente="@cliente.CodigoCliente">
+                                                    Detalles
+                                                </a>
+
+                                            </td>
                                         </tr>
-                                    }                                                                      
+                                    }
                                 </tbody>
                             </table>
                         </div>
@@ -70,3 +75,8 @@
         <!-- #END# Exportable Table -->
     </div>
 </section>
+
+@section Scripts {
+    <!-- Archivo js para pagina de index de clientes -->
+    <script src="~/js/clients/index.js"></script>
+}

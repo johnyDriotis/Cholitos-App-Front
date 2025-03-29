@@ -35,6 +35,9 @@
     <!-- JQuery DataTable Css -->
     <link href="~/template/plugins/jquery-datatable/skin/bootstrap/css/datatables.bootstrap.css" rel="stylesheet" />
 
+    <!-- Sweetalert Css -->
+    <link href="~/template/plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+
     @RenderSection("Styles", required: false);
 </head>
 
@@ -461,10 +464,10 @@
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="/Client/Index">Listado de clientes</a>
+                                <a asp-controller="Client" asp-action="Index">Listado de clientes</a>
                             </li>
                             <li>
-                                <a href="Client/NuevoCliente">Nuevo Cliente</a>
+                                <a asp-controller="Client" asp-action="AddClient">Nuevo Cliente</a>
                             </li>
                         </ul>
                     </li>
@@ -839,15 +842,23 @@
     <script src="~/template/plugins/jquery-datatable/extensions/export/buttons.html5.min.js"></script>
     <script src="~/template/plugins/jquery-datatable/extensions/export/buttons.print.min.js"></script>
 
-    <!-- Configuracion de datatable personalizado al idioma espanol -->
+    <!-- Configuracion de datatable al idioma espanol - personalizado -->
     <script src="~/template/js/custom/datatable-config.js"></script>
+
+    <!-- Metodos genericos de javascript - personalizado -->
+    <script src="~/js/genericmethods.js"></script>
 
     <!-- Jquery Validation Plugin Css -->
     <script src="~/template/plugins/jquery-validation/jquery.validate.js"></script>
-    
+
+    <!-- Bootstrap Notify Plugin Js -->
+    <script src="~/template/plugins/bootstrap-notify/bootstrap-notify.js"></script>
+
+    <!-- SweetAlert Plugin Js -->
+    <script src="~/template/plugins/sweetalert/sweetalert.min.js"></script>
+
     <!-- Custom Js -->
     <script src="~/template/js/admin.js"></script>
-    <script src="~/template/js/custom/form-validation.js"></script>
 
     <!-- Demo Js -->
     <script src="~/template/js/demo.js"></script>

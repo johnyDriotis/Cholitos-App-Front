@@ -1,0 +1,102 @@
+﻿@model ClientDto
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Modificar cliente";
+
+    bool estado = Model.Estado.Equals("A") ? true : false;
+    string lblEstadoActual = Model.Estado.Equals("A") ? "El estado actual del cliente es activo" : "El estado actual del cliente es inactivo";
+}
+
+<section class="content">
+    <div class="container-fluid">
+        <!-- Basic Validation -->
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <div class="header">
+                        <h2>Formulario para modificar clientes</h2>
+                    </div>
+                    <div class="body">
+                        <form id="frmModificarCliente" method="POST" novalidate="novalidate">
+
+                            <!-- Hiddens -->
+                            <input type="hidden" id="hdnIdCliente" value="@Model.CodigoCliente" />
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" id="txtPrimerNombre" name="txtPrimerNombre" 
+                                            required="" aria-required="true" maxlength="30" value="@Model.PrimerNombre">
+                                            <label class="form-label">Primer nombre</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" id="txtSegundoNombre" name="txtSegundoNombre" value="@Model.SegundoNombre">
+                                            <label class="form-label">Segundo nombre</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" id="txtPrimerApellido" name="txtPrimerApellido" required=""
+                                                   aria-required="true" maxlength="30" value="@Model.PrimerApellido">
+                                            <label class="form-label">Primer apellido</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" id="txtSegundoApellido" name="txtSegundoApellido" value="@Model.SegundoApellido">
+                                            <label class="form-label">Segundo apellido</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" id="txtApellidoCasada" name="txtApellidoCasada" value="@Model.ApellidoCasada">
+                                            <label class="form-label">Apellido casada</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div>
+                                            <input type="checkbox" id="chkEstado" name="chkEstado" checked="@estado">
+                                            <label for="chkEstado">@lblEstadoActual ... </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row clearfix jsdemo-notification-button">
+                                <button class="btn btn-primary waves-effect" type="submit">Guardar</button>
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- #END# Basic Validation -->
+    </div>
+</section>
+
+@section Scripts {
+    <!-- Archivo js para pagina de modificar cliente -->
+    <script src="~/js/clients/modifyclient.js"></script>
+}

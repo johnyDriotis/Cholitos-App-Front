@@ -15,7 +15,8 @@ namespace CholitosAppFront.Configuration
                 .ForMember(dest => dest.SegundoNombre, opt => opt.MapFrom(src => src.Segundo_Nombre))
                 .ForMember(dest => dest.PrimerApellido, opt => opt.MapFrom(src => src.Primer_Apellido))
                 .ForMember(dest => dest.SegundoApellido, opt => opt.MapFrom(src => src.Segundo_Apellido))
-                .ForMember(dest => dest.ApellidoCasada, opt => opt.MapFrom(src => src.Apellido_Casada));
+                .ForMember(dest => dest.ApellidoCasada, opt => opt.MapFrom(src => src.Apellido_Casada))
+                .ForMember(dest => dest.Estado, opt => opt.MapFrom(src => src.Estado));
         }
     }
 }
