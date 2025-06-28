@@ -9,6 +9,7 @@ namespace CholitosAppFront.Core.UseCases
     public class ClientUseCase : IClientUseCase
     {
         private readonly IClientRepository _clientRepository;
+
         public ClientUseCase(IClientRepository clientRepository)
         {
             _clientRepository = clientRepository ?? throw new ArgumentNullException(nameof(clientRepository));

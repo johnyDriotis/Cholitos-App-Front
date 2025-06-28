@@ -5,9 +5,9 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CholitosAppFront", "CholitosAppFront\CholitosAppFront.csproj", "{06C9C6AD-67EC-4732-8339-BD4AA9DD2A0E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CholitosAppFront.Core", "CholitosAppFront.Core\CholitosAppFront.Core.csproj", "{63289B80-765A-4EFA-A90F-466BC34F1CF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CholitosAppFront.Core", "CholitosAppFront.Core\CholitosAppFront.Core.csproj", "{63289B80-765A-4EFA-A90F-466BC34F1CF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CholitosAppFront.Infrastructure", "CholitosAppFront.Infrastructure\CholitosAppFront.Infrastructure.csproj", "{5BAF75F6-F893-4658-AF75-9B927C0ABD7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CholitosAppFront.Infrastructure", "CholitosAppFront.Infrastructure\CholitosAppFront.Infrastructure.csproj", "{5BAF75F6-F893-4658-AF75-9B927C0ABD7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

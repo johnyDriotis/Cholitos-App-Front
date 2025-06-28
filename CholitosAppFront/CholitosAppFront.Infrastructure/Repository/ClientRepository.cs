@@ -7,6 +7,7 @@ using CholitosAppFront.Core.Response;
 using CholitosAppFront.Core.Utils;
 using CholitosAppFront.Infrastructure.Queries;
 using Dapper;
+using libzkfpcsharp;
 using System.Data;
 using System.Diagnostics;
 
@@ -29,7 +30,8 @@ namespace CholitosAppFront.Infrastructure.Repository
             _dbConnection = _connectionManagerRepository.OpenAndReturnConnectionOfDatabase();
         }
 
-        public async Task<GenericResponse<List<ClientDto>>> GetAllClients() {
+        public async Task<GenericResponse<List<ClientDto>>> GetAllClients()
+        {
             try
             {
                 string query = ClientQuery.GetAllClients();
@@ -63,7 +65,7 @@ namespace CholitosAppFront.Infrastructure.Repository
 
                 string query = ClientQuery.AddClient();
                 int res = await _dbConnection.ExecuteAsync(query, new
-                {   
+                {
                     CodigoGimnasio = codeGym,
                     PrimerNombre = clientRequest.PrimerNombre,
                     SegundoNombre = clientRequest.SegundoNombre,
@@ -86,8 +88,8 @@ namespace CholitosAppFront.Infrastructure.Repository
                         ApellidoCasada = clientRequest.ApellidoCasada,
                         Estado = clientRequest.Estado
                     }
-                };                   
-                       
+                };
+
             }
             catch (Exception ex)
             {
@@ -99,7 +101,7 @@ namespace CholitosAppFront.Infrastructure.Repository
                     ErrorGenerado = ex.Message
                 };
             }
-               
+
         }
 
         public async Task<GenericResponse<ClientDto>> ModifyClient(ClientRequest clientRequest)

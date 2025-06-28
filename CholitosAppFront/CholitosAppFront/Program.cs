@@ -24,9 +24,11 @@ builder.Services.AddAutoMapper(typeof(MapProfile));
 // Repository services
 builder.Services.AddScoped<IConnectionManagerRepository, ConnectionManagerRepository>();
 builder.Services.AddScoped<IClientRepository, ClientRepository>();
+builder.Services.AddScoped<IMembershipRepository, MembershipRepository>();
 
 // UseCases services
 builder.Services.AddScoped<IClientUseCase, ClientUseCase>();
+builder.Services.AddScoped<IMembershipUseCase, MembershipUseCase>();
 
 #endregion
 

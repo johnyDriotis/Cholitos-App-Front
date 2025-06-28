@@ -4,6 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Platforms>AnyCPU;x86</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,6 +19,12 @@
   <ItemGroup>
     <ProjectReference Include="..\CholitosAppFront.Core\CholitosAppFront.Core.csproj" />
     <ProjectReference Include="..\CholitosAppFront.Infrastructure\CholitosAppFront.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="libzkfpcsharp">
+      <HintPath>..\..\..\..\..\Users\johny\Downloads\zkfinger_sdk_v10.0-windows-lite-zk9500\ZKFinger SDK V10.0-Windows-Lite\C#\lib\x64\libzkfpcsharp.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
