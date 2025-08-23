@@ -1,4 +1,4 @@
-﻿using CholitosAppFront.Core.Interfaces;
+﻿using CholitosAppFront.Core.Configuration;
 
 namespace CholitosAppFront.Configuration
 {
@@ -23,14 +23,27 @@ namespace CholitosAppFront.Configuration
             else {
                 this.ConnectionString = $"Server = {this.Server}; Initial Catalog = {this.Database}; User ID = {this.UserName}; Password = {this.Password}";
             }
+
+            // Obtener url para api de Gimnasio.
+            this.UrlGimnasioService = configuration["CholitosAppFront.Configuration.GimnasioService:UrlService"] ?? "";
         }
 
-        // Propiedades que se implementan a traves de la interfaz IProperties.
+        #region Propiedades que se implementan a traves de la interfaz IProperties.
+
+        // Base de datos.
         public string Server { get; }
         public string Database { get; }
         public string UserName { get; }
         public string Password { get; }
         public string IntegratedSecurity { get; }
+
+        // Gimnasio service.
+        public string UrlGimnasioService { get; }
+
+        #endregion
+
+
+
 
 
         // Propiedades que no se necesita sean inyectadas por un servicio

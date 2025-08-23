@@ -1,4 +1,6 @@
-﻿@model GenericResponse<List<ClientDto>>
+﻿@using CholitosAppFront.Core.DTOs
+
+@model List<ClientDto>
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -32,13 +34,13 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach (var cliente in Model.Item)
+                                    @foreach (var cliente in Model)
                                     {
                                         string btnClassEstado = cliente.Estado.Equals("A") ? "btn-success" : "btn-danger";
 
                                         <tr>
                                             <td>@cliente.CodigoCliente</td>
-                                            <td>@cliente.CodigoGimnasio</td>
+                                            
                                             <td>@cliente.PrimerNombre @cliente.SegundoNombre @cliente.PrimerApellido @cliente.SegundoApellido @cliente.ApellidoCasada</td>
                                             <td>
                                                 <a type="button" class="btn btn-primary waves-effect" asp-controller="Client" asp-action="ModifyClient"
@@ -73,6 +75,7 @@
             </div>
         </div>
         <!-- #END# Exportable Table -->
+
     </div>
 </section>
 

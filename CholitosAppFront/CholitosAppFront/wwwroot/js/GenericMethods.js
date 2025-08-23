@@ -103,3 +103,10 @@ function sweetAlertSuccess(textSuccess, complementTextSuccess) {
 function sweetAlertError(textError, complementTextError) {
     swal(textError, complementTextError, "error");
 }
+
+function isNullOrEmpty(field) {
+    if (field == null || field == undefined || field == '') {
+        return true;
+    }
+    return false;
+}

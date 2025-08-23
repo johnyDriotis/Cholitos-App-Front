@@ -3,6 +3,9 @@
     ViewData["Title"] = "Nuevo cliente";
 }
 
+<!-- Css global -->
+<link type="text/css" rel="stylesheet" href="/css/global.css"/>
+
 <section class="content">
     <div class="container-fluid">
         <!-- Basic Validation -->
@@ -68,25 +71,49 @@
                                     <div class="form-group">
                                         <div>
                                             <input type="checkbox" id="chkEstado" name="chkEstado" checked>
-                                            <label for="chkEstado">Estado ... </label>
+                                            <label for="chkEstado">Cliente activo</label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <button class="btn btn-primary waves-effect" type="submit">Guardar</button>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <!-- Image galery -->
+                                    <div id="aniimated-thumbnials" class="list-unstyled row clearfix" style="margin-top: -27px;">
+                                        <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12" style="margin-bottom: -25px;">
+                                            <a href="../../images/image-gallery/1.jpg" data-sub-html="Demo Description">
+                                                <img class="img-responsive thumbnail" src="../img/imageDefault.png" id="fingerPrintImage">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- End image galery -->
+                                    <div id="divCustomErrorImage">
+                                        <hr id="hrErrorHuella" class="border-custom-error"/>
+                                        <p id="pErrorMessage" class="label-custom-error">* Este campo es requerido ... </p>
+                                        <input type="hidden" id="hdnBase64HuellaDactilar" value="" />
+                                    </div>
+                                </div>
+                            </div>
 
+                            @* <div class="row">
+                                <div class="col-md-6"> *@
+                                    <button class="btn btn-primary waves-effect" type="button" id="btnCapturarHuellas">Capturar huellas</button>
+                                    <button class="btn btn-primary waves-effect" type="submit">Guardar</button>
+                                @* </div>
+                            </div> *@
 
-                        </form>
+                        </form>                        
+
                     </div>
                 </div>
             </div>
         </div>
-        <!-- #END# Basic Validation -->
+        <!-- End basic validation -->
     </div>
 </section>
 
 @section Scripts {
-    <!-- Archivo js para pagina de agregar cliente -->
+    <script src="~/js/global.js"></script>
     <script src="~/js/clients/addclient.js"></script>
 }

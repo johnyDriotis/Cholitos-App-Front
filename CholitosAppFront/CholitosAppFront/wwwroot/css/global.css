@@ -1,0 +1,14 @@
+﻿
+.label-custom-error {
+    margin-top: -15px !important;
+    margin-bottom: -10px !important;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+    font-weight: normal;
+    color: #F44336;
+}
+
+.border-custom-error {
+    border-color: #F44336;
+}

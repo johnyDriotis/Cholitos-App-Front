@@ -1,4 +1,4 @@
-﻿namespace CholitosAppFront.Core.Interfaces
+﻿namespace CholitosAppFront.Core.Configuration
 {
     public interface IProperties
     {
@@ -8,6 +8,7 @@
         string UserName { get; }
         string Password { get; }
         string IntegratedSecurity { get; }
+        string UrlGimnasioService { get; }
 
         // Propiedades de lectura y escritura.
         string ConnectionString { get; set; }

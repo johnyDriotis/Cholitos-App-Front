@@ -1,54 +1,42 @@
-﻿using CholitosAppFront.Core.DTOs;
-using CholitosAppFront.Core.Interfaces;
+﻿using CholitosAppFront.Core.Dtos;
+using CholitosAppFront.Core.DTOs;
 using CholitosAppFront.Core.Request;
 using CholitosAppFront.Core.Response;
+using CholitosAppFront.Core.Services.Interfaces;
 using CholitosAppFront.Core.UseCases.Interfaces;
+using Newtonsoft.Json;
 
 namespace CholitosAppFront.Core.UseCases
 {
     public class ClientUseCase : IClientUseCase
     {
-        private readonly IClientRepository _clientRepository;
+        private readonly IGimnasioService _gimnasioService;
 
-        public ClientUseCase(IClientRepository clientRepository)
-        {
-            _clientRepository = clientRepository ?? throw new ArgumentNullException(nameof(clientRepository));
+        public ClientUseCase(IGimnasioService gimnasioService) { 
+            _gimnasioService = gimnasioService ?? throw new ArgumentNullException(nameof(gimnasioService));
         }
 
-        public async Task<GenericResponse<List<ClientDto>>> GetAllClients()
-        {
-            var response = await _clientRepository.GetAllClients();
-            return response;
+        public async Task<GenericResponseFingerPrint<FingerPrintDto>> GetFingerPrintImages() {
+            GenericResponseFingerPrint<FingerPrintDto> genericResponseFingerPrint = new();
+            string controller = "FingerPrint";
+            string action = "FingerPrintCaptureThreeTimes";
+
+            string response = await _gimnasioService.ConsumePostMethod(controller, action);
+            genericResponseFingerPrint = JsonConvert.DeserializeObject<GenericResponseFingerPrint<FingerPrintDto>>(response);
+
+            return genericResponseFingerPrint;
         }
 
         public async Task<GenericResponse<ClientDto>> AddClient(ClientRequest clientRequest)
         {
-            var response = await _clientRepository.AddClient(clientRequest);
-            return response;
-        }
+            GenericResponse<ClientDto> genericResponse = new();
+            string controller = "Client";
+            string action = "Create";
 
-        public async Task<GenericResponse<ClientDto>> ModifyClient(ClientRequest clientRequest)
-        {
-            var response = await _clientRepository.ModifyClient(clientRequest);
-            return response;
-        }
+            string response = await _gimnasioService.ConsumePostMethod(controller, action, clientRequest);
+            genericResponse = JsonConvert.DeserializeObject<GenericResponse<ClientDto>>(response);
 
-        public async Task<GenericResponse<ClientDto>> DeleteClient(ClientRequest clientRequest)
-        {
-            var response = await _clientRepository.DeleteClient(clientRequest);
-            return response;
-        }
-
-        public async Task<GenericResponse<ClientDto>> ChangeStateClient(ClientRequest clientRequest)
-        {
-            var response = await _clientRepository.ChangeStateClient(clientRequest);
-            return response;
-        }
-
-        public async Task<GenericResponse<ClientDto>> GetClientById(int idCliente)
-        {
-            var response = await _clientRepository.GetClientById(idCliente);
-            return response;
+            return genericResponse;
         }
     }
 }

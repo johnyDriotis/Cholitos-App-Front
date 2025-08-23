@@ -1,31 +1,25 @@
-using CholitosAppFront.Core.Interfaces;
+using CholitosAppFront.Core.DTOs;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CholitosAppFront.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IConnectionManagerRepository _connectionManagerRepository;
+        //private readonly IConnectionManagerRepository _connectionManagerRepository;
 
-        public HomeController(IConnectionManagerRepository connectionManagerRepository)
-        {
-            this._connectionManagerRepository = connectionManagerRepository ?? throw new ArgumentNullException(nameof(connectionManagerRepository));
-        }
+        //public HomeController(IConnectionManagerRepository connectionManagerRepository)
+        //{
+        //    this._connectionManagerRepository = connectionManagerRepository ?? throw new ArgumentNullException(nameof(connectionManagerRepository));
+        //}
 
         public IActionResult Index()
         {
-            string conexionExitosa = "";
-
-            conexionExitosa = _connectionManagerRepository.ConnectToDatabaseWithMessage();
-
-            ViewData["MsjConexion"] = conexionExitosa; 
-
-            return View();
+            return View(new ClientDto());
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+        //public IActionResult Privacy()
+        //{
+        //    return View();
+        //}
     }
 }
